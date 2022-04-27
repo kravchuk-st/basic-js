@@ -13,13 +13,15 @@ const { NotImplementedError } = require('../extensions/index.js');
  *  ['^^', 1, 2]
  * ]) => 3`
  *
- */
-function countCats(arr) {
-  // throw new NotImplementedError('Not implemented');
-  let result = arr.reduce((el, sum) => {
-    if(el.includes('^^')) sum++ 
-  }, 0);
-  return result;
+ **/
+function countCats(arr = []) {
+  let sum = 0;
+  arr.forEach(item =>  {
+    item.forEach(el => {
+      if(el === '^^') sum++
+    })
+  })
+  return sum;
 }
 
 module.exports = {
