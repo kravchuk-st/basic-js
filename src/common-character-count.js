@@ -14,15 +14,15 @@ const { NotImplementedError } = require('../extensions/index.js');
 function getCommonCharacterCount(s1, s2) {
   if (s1.length === 0 || s2.length === 0) return 0;
   
-  const arr2 = s2.split('');
+  const arr = s2.split('');
  
   let n = 0;
 
   for (let i = 0; i < s1.length; i++) {
-		let ind = arr2.indexOf(s1[i]);
+		let ind = arr.indexOf(s1[i]);
 		if (ind !== -1) {
 			n++;
-			arr2.splice(ind, 1);
+			arr.splice(ind, 1);
 		}
 	}
 	
