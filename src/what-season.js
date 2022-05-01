@@ -17,7 +17,7 @@ function getSeason(date) {
   }
   if (date === null || date == undefined) return 'Unable to determine the time of year!'
 
-  let month = data.getMonth();
+  let month = date.getMonth();
 
   if(month === 11 || month === 0 || month === 1) {
     return 'winter';
