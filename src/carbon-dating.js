@@ -25,7 +25,7 @@ function dateSample(sampleActivity) {
   let k = +((Math.LN2).toFixed(3)) / HALF_LIFE_PERIOD;
 	let time = Math.ceil(Math.log(MODERN_ACTIVITY / +sampleActivity) / k);
 
-  return (time == Infinity || time == NaN || time == undefined) ? false : time;
+  return (time == NaN || time == undefined || time == Infinity) ? false : time;
 }
 
 module.exports = {
